@@ -6,15 +6,18 @@ import strCalculator from "../../utils";
 const StringCalculator: React.FC = () => {
   const [input, setInput] = useState<string>("");
   const [result, setResult] = useState<number | null>(null);
+  const [error, setError] = useState<string>("");
 
   // Handle Calculate Button Click
   const handleCalculate = () => {
     try {
+      setError("");
       const numbers = unescape(input);
       const calculationResult = strCalculator(numbers);
       setResult(calculationResult);
     } catch (error: any) {
       setResult(null);
+      setError(error.message);
     }
   };
   return (
@@ -32,6 +35,7 @@ const StringCalculator: React.FC = () => {
           Calculate
         </button>
         {result !== null && <div className="result-box">Result: {result}</div>}
+        {error && <div className="error-box">{error}</div>}
       </div>
     </div>
   );
