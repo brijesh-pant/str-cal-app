@@ -15,7 +15,17 @@ function strCalculator(numbers: string): number {
     return 0;
   }
 
+  //   Create needed separators
   const separators = [",", "\n"];
+  let additionalSeparator = "";
+
+  // Check for additional delimiter
+  if (numbers.startsWith("//")) {
+    const separatorEnd = numbers.indexOf("\n");
+    additionalSeparator = numbers.slice(2, separatorEnd); // extract custom separator
+    separators.push(additionalSeparator); // push custom separator into existing separators
+    numbers = numbers.slice(separatorEnd + 1);
+  }
 
   const numbersArr = splitBySeparators(numbers.split(separators[0]), separators)
     .filter((num) => num.trim() !== "")
