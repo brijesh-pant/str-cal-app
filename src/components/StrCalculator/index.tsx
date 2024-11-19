@@ -31,11 +31,19 @@ const StringCalculator: React.FC = () => {
           onChange={(e) => setInput(e.target.value)}
           className="input-box"
         />
-        <button onClick={handleCalculate} className="calculate-button">
+        <button
+          onClick={handleCalculate}
+          className="calculate-button"
+          aria-label="Calculate sum of numbers"
+        >
           Calculate
         </button>
         {result !== null && <div className="result-box">Result: {result}</div>}
-        {error && <div className="error-box">{error}</div>}
+        {error && (
+          <div className="error-box" role="alert" aria-describedby={error}>
+            {error}
+          </div>
+        )}
       </div>
     </div>
   );
