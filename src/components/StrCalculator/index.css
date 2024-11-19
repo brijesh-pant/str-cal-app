@@ -1,0 +1,21 @@
+/* Main Container */
+.main-container {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Calculator Box */
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Title */
+.title {
+  font-size: 2rem;
+}

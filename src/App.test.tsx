@@ -12,4 +12,10 @@ describe("App Component", () => {
     const appDiv = container.firstChild as HTMLElement;
     expect(appDiv).toHaveClass("App");
   });
+
+  it("contains StrCalculator component", () => {
+    const { getByTestId } = render(<App />);
+    const calculator = getByTestId("str-calculator");
+    expect(calculator).toBeInTheDocument();
+  });
 });
