@@ -48,4 +48,12 @@ describe("strCalculator", () => {
   it("should handle leading comma", () => {
     expect(strCalculator(",1,2")).toBe(3);
   });
+
+  it("should handle mixed comma and newline separators", () => {
+    expect(strCalculator("1\n2,3")).toBe(6);
+  });
+
+  it("should handle newline as separator", () => {
+    expect(strCalculator("1\n2\n3")).toBe(6);
+  });
 });
