@@ -64,4 +64,34 @@ describe("strCalculator", () => {
   it("should handle custom delimiter with special characters", () => {
     expect(strCalculator("//$#@\n1$#@2$#@3")).toBe(6);
   });
+
+  it("should throw error for single negative number", () => {
+    expect(() => strCalculator("-1")).toThrow(
+      "negative numbers not allowed: -1"
+    );
+  });
+
+  it("should throw error for multiple negative numbers", () => {
+    expect(() => strCalculator("-1,-2,-3")).toThrow(
+      "negative numbers not allowed: -1, -2, -3"
+    );
+  });
+
+  it("should throw error for negative numbers with mixed comma and newline separators", () => {
+    expect(() => strCalculator("-1\n-2,-3")).toThrow(
+      "negative numbers not allowed: -1, -2, -3"
+    );
+  });
+
+  it("should throw error for negative numbers with custom delimiter", () => {
+    expect(() => strCalculator("//*\n-1*-2*-3")).toThrow(
+      "negative numbers not allowed: -1, -2, -3"
+    );
+  });
+
+  it("should throw error for mixed positive and negative numbers", () => {
+    expect(() => strCalculator("1,-2,3,-4")).toThrow(
+      "negative numbers not allowed: -2, -4"
+    );
+  });
 });
