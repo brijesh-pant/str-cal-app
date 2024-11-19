@@ -14,11 +14,11 @@ describe("strCalculator", () => {
   });
 
   it("should add multiple single digit numbers", () => {
-    expect(strCalculator("125")).toBe(8);
+    expect(strCalculator("125")).toBe(125);
   });
 
   it("should handle string with zeros", () => {
-    expect(strCalculator("1020")).toBe(3);
+    expect(strCalculator("1020")).toBe(1020);
   });
 
   it("should handle string with single zero", () => {
@@ -27,5 +27,25 @@ describe("strCalculator", () => {
 
   it("should handle string with all zeros", () => {
     expect(strCalculator("000")).toBe(0);
+  });
+
+  it("should add two numbers separated by comma", () => {
+    expect(strCalculator("1,2")).toBe(3);
+  });
+
+  it("should add multiple numbers separated by commas", () => {
+    expect(strCalculator("1,2,3,4,5")).toBe(15);
+  });
+
+  it("should handle empty values between commas", () => {
+    expect(strCalculator("1,,2")).toBe(3);
+  });
+
+  it("should handle trailing comma", () => {
+    expect(strCalculator("1,2,")).toBe(3);
+  });
+
+  it("should handle leading comma", () => {
+    expect(strCalculator(",1,2")).toBe(3);
   });
 });
