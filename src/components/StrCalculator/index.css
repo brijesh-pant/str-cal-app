@@ -19,3 +19,35 @@
 .title {
   font-size: 2rem;
 }
+
+/* Input Box */
+.input-box {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Button */
+.calculate-button {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #0d3253;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Result Box */
+.result-box {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
