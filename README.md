@@ -1,3 +1,11 @@
+# String Calculator App
+
+[Documentation](DOCS.md)
+
+[![CI/CD](https://github.com/brijesh-pant/str-cal-app/actions/workflows/node.js.yml/badge.svg)](https://github.com/brijesh-pant/str-cal-app/actions/workflows/node.js.yml)
+[![pages-build-deployment](https://github.com/brijesh-pant/str-cal-app/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/brijesh-pant/str-cal-app/actions/workflows/pages/pages-build-deployment)
+[![codecov](https://codecov.io/gh/brijesh-pant/str-cal-app/graph/badge.svg?token=RALPXPSDY6)](https://codecov.io/gh/brijesh-pant/str-cal-app)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
