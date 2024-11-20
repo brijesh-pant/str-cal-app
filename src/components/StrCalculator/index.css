@@ -1,0 +1,62 @@
+/* Main Container */
+.main-container {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Calculator Box */
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Title */
+.title {
+  font-size: 2rem;
+}
+
+/* Input Box */
+.input-box {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Button */
+.calculate-button {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #0d3253;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Result Box */
+.result-box {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Error Box */
+.error-box {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ff5555;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
